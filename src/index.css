@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+
+    /* Ayurveda-inspired green primary */
+    --primary: 142 72% 29%; /* emerald-700 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 82 39% 50%; /* lime-500 */
+    --secondary-foreground: 210 11% 15%;
+
+    --muted: 210 16% 96%;
+    --muted-foreground: 215 16% 46%;
+
+    --accent: 160 84% 39%; /* green-500 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 142 72% 29%;
+
+    --radius: 0.75rem;
+  }
+
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+  }
+}
+
+@layer utilities {
+  .brand-gradient {
+    background-image: radial-gradient(
+        1200px 600px at 20% -20%,
+        rgba(16, 185, 129, 0.25),
+        transparent 60%
+      ),
+      radial-gradient(
+        1200px 600px at 80% 0%,
+        rgba(132, 204, 22, 0.2),
+        transparent 60%
+      );
+  }
+}
