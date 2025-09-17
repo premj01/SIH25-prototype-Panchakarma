@@ -1,6 +1,6 @@
 export const ROLES = {
-  guest: 'GUEST',
-  client: 'CLIENT',
+  client: 'PATIENT',
+  guest: 'THERAPIST',
   doctor: 'DOCTOR',
   centerAdmin: 'CENTER_ADMIN',
   superAdmin: 'SUPER_ADMIN',

@@ -14,8 +14,37 @@ import {
   DEFAULT_ROOMS,
   DEFAULT_PACKAGES,
 } from "@/data/mock";
+import Navbarrr from "./pages/Navbarrr";
 
 function App() {
+  const navLinks = {
+    PATIENT: [
+      { to: "/", label: "Home" },
+      { to: "/progress", label: "Progress" },
+    ],
+    THERAPIST: [
+      { to: "/", label: "Home" },
+      { to: "/schedule", label: "Schedule" },
+      { to: "/patients", label: "Patients" },
+    ],
+    DOCTOR: [
+      { to: "/", label: "Home" },
+      { to: "/therapies", label: "Therapies" },
+      { to: "/schedule", label: "Schedule" },
+    ],
+    DEFAULT: [
+      { to: "/", label: "Home" },
+      { to: "/therapies", label: "Therapies" },
+      { to: "/schedule", label: "Schedule" },
+      { to: "/patients", label: "Patients" },
+      { to: "/staff", label: "Staff" },
+      { to: "/rooms", label: "Rooms" },
+      { to: "/packages", label: "Packages" },
+      { to: "/notifications", label: "Precautions" },
+      { to: "/progress", label: "Progress" },
+      { to: "/admin", label: "Admin" },
+    ],
+  };
   useEffect(() => {
     ensureDefaultTherapies(DEFAULT_THERAPIES);
     ensureDefaultDataset({
@@ -36,7 +65,13 @@ function App() {
           >
             <Leaf className="h-5 w-5" /> Panchakarma
           </Link>
-          <nav className="flex items-center gap-4 text-sm">
+          <div
+            className="flex items-left justify-left gap-2"
+            style={{ justifySelf: "left", width: "60%" }}
+          >
+            <Navbarrr></Navbarrr>
+          </div>
+          {/* <nav className="flex items-center gap-4 text-sm">
             <Link to="/" className="hover:text-emerald-700">
               Home
             </Link>
@@ -67,7 +102,7 @@ function App() {
             <Link to="/admin" className="hover:text-emerald-700">
               Admin
             </Link>
-          </nav>
+          </nav> */}
           <div className="flex items-center gap-3">
             <RoleSwitcher />
             <Button asChild className="bg-emerald-600 hover:bg-emerald-700">

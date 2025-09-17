@@ -19,8 +19,8 @@ export default function RoleSwitcher() {
         <SelectValue placeholder="Role" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value={ROLES.guest}>Guest</SelectItem>
-        <SelectItem value={ROLES.client}>Client</SelectItem>
+        <SelectItem value={ROLES.client}>Patient</SelectItem>
+        <SelectItem value={ROLES.guest}>Therapist</SelectItem>
         <SelectItem value={ROLES.doctor}>Doctor</SelectItem>
         <SelectItem value={ROLES.centerAdmin}>Center Admin</SelectItem>
         <SelectItem value={ROLES.superAdmin}>Super Admin</SelectItem>
